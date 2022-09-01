@@ -1,0 +1,52 @@
+.Title{
+    text-align: center;
+    margin: 16px;
+}
+
+.Main-Container{
+    display: flex;
+    padding: 32px;
+    gap: 24px;
+    margin: 16px;
+}
+
+.Container-One, .Container-Two, .Container-Three, .Container-Right-Edge, .Container-Left-Edge{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px; 
+    border-radius: 120px;
+}
+
+.Container-One, .Container-Two, .Container-Three{
+    border: 2px solid black;
+}
+
+.Container-Left-Edge, .Container-Right-Edge{
+   
+}
+
+.Rock-Image, .Paper-Image, .Scissors-Image, .Btn-Contaienr{
+    flex: 1 1 auto;
+    
+}
+
+img{
+    width: 150px;
+    height: auto; 
+}
+.Results{
+    margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Scoreboard{
+    border: 2px solid black;
+    padding: 32px;
+}
+

@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 function getComputerChoice(){
 
     const numOfChoices =3;
@@ -17,22 +19,28 @@ function playRound(playerSelection, computerSelection){
         if(computerSelection=="rock"){
             return "It's a tie! Rock doesn't beat Rock!";
         }else if(computerSelection=="paper"){
+            computerScore++;
             return "You lose! Paper beats Rock!";
         }else if(computerSelection=="scissors"){
+
             return "You win! Rock beats Scissors!";
         }
     }else if(playerSelection=="paper"){
         if(computerSelection=="rock"){
+            playerScore++;
             return "You win! Paper beats Rock!";
         }else if(computerSelection=="paper"){
             return "Its a tie! Paper doesn't beat Paper!"
         }else if(computerSelection=="scissors"){
+            computerScore++;
             return "You lose! Scissors beats Paper!"
         }
     }else if(playerSelection=="scissors"){
         if(computerSelection=="rock"){
+            computerScore++;
             return "You lose! Rock beats Scissors!"
         }else if(computerSelection=="paper"){
+            playerScore++;
             return "You win! Scissors beats Paper!"
         }else if(computerSelection=="scissors"){
             return "Its a tie! Scissors doesn't beat Scissors!"
@@ -60,11 +68,20 @@ function getPlayerChoice(){
 
 function playGame(){
 
-    for(let i =0; i<5; i++){
-
-        let result = playRound(getPlayerChoice(),getComputerChoice());
-        alert(result);
-    }
+    
 }
 
-playGame();
+const rockBtn = document.querySelector('.Rock-Btn');
+const paperBtn = document.querySelector('.Paper-Btn');
+const scissorsBtn = document.querySelector('.Scissors-Btn');
+rockBtn.addEventListener('click', playRound("rock", getComputerChoice()));
+paperBtn.addEventListener('click', playRound("paper", getComputerChoice()));
+scissorsBtn.addEventListener('click', playRound("scissors", getComputerChoice()));
+while(1){
+    if(playerScore<5){
+
+        break;
+    }else if(computerScore<5){
+        
+    }
+}
