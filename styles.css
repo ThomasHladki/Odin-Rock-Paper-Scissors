@@ -49,4 +49,14 @@ img{
     border: 2px solid black;
     padding: 32px;
 }
+.Secondary-Container{
+    display: flex;
 
+}
+
+.Play-Again-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

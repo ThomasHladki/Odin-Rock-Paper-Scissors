@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src = "script.js"></script>
+    <script src = "script.js" defer></script>
     <title>Rock-Paper-Scissors</title>
 </head>
 <body>
@@ -36,10 +36,11 @@
   </div>
   <div class ="Results">
     <div class ="Scoreboard">
-      <h4>Scoreboard</h4>
-      <p>Player Score:</p>
-      <p>Computer Score:</p>
+      <h4 class ="Scoreboard-Title">Scoreboard</h4>
+      <p class="Player-Score">Player Score: <span class ="Player-Score-Value">0</span></p>
+      <p class = "Computer-Score">Computer Score: <span class ="Computer-Score-Value">0</span></p>
     </div>
   </div>
+  <div class = "Play-Again-Container"></div>
 </body>
 </html>
